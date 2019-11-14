@@ -1,5 +1,4 @@
 module.exports = {
-  //entry: './src/index.js',
   entry: './build/web.js',
   mode: 'production',
   module: {
@@ -32,12 +31,12 @@ module.exports = {
     extensions: ['*', '.js']
   },
   output: {
-    path: __dirname + '/dist',
+    path: __dirname + '/browser',
     publicPath: '/',
     filename: 'uiplay.js'
   },
   devtool: 'source-map',
   devServer: {
-    contentBase: './dist'
+    contentBase: './browser'
   }
 }

@@ -30,7 +30,9 @@ module.exports = {
   output: {
     path: __dirname + '/',
     publicPath: '/',
-    filename: 'index.js'
+    filename: 'index.js',
+    library: "uiplay",
+    libraryTarget: "umd"
   },
   devServer: {
     contentBase: './dist'

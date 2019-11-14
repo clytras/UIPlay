@@ -24,6 +24,8 @@ Browser:<br>
 ## Usage
 
 ```
+import UIPlay from 'uiplay';
+
 const NofifyAudio = new UIPlay(
   'orders_notify.mp3',
   {

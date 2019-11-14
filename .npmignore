@@ -1,0 +1,13 @@
+node_modules
+.env
+.eslintignore
+.eslintrc
+.prettierignore
+.prettierrc
+test/
+src/
+build/
+design/
+babel.config.js
+npm-debug.log
+yarn-error.log

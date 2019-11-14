@@ -3,7 +3,7 @@
   "displayName": "UIPlay",
   "version": "1.0.0",
   "description": "Interface to play audio and other web compatible resources",
-  "jsdelivr": "./dist/uiplay.js",
+  "jsdelivr": "./browser/uiplay.js",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
