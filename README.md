@@ -21,7 +21,7 @@ Yarn:<br>
 Browser:<br>
 Download latest release from [releases](https://github.com/clytras/UIPlay/releases), or browse [JSDeliver](https://www.jsdelivr.com/package/npm/uiplay) CDN to pick the latest version.
 ```
-<script src='uiplay.js'></script>
+<script src='https://cdn.jsdelivr.net/npm/uiplay@latest/dist/uiplay.min.js'></script>
 ```
 
 ## Usage
