@@ -39,6 +39,23 @@ document.getElementById('play-audio').addEventListener('click', () => {
 });
 ```
 
+### Methods
+
+`UIPlay(file: string, options: object)` (`contructor`)<br>
+The initialization of a new HTMLMediaElement object.
+
+`play(volume: number)`<br>
+Plays the audio using a debouncing timer. The `volume` parameter can be ommited to use `options` volume.
+
+`playImmediate(volume: number)`<br>
+Plays the audio immediately without debouncing. The `volume` parameter can be ommited to use `options` volume.
+
+`setVolume(volume: number)`<br>
+Sets the volume level using decimal fraction (0-1).
+
+NOTE: All methods return the actual object.
+
+
 ### Options
 
 | Option | Accepts      | Description |
