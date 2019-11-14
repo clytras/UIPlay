@@ -10,8 +10,8 @@
     "build": "yarpm run build:browser && yarpm run build:module",
     "build:browser": "npx webpack --config webpack.web.config.js",
     "build:module": "npx webpack --config webpack.module.config.js --out",
-    "deploy": "yarpm run build && npm publish --access-public && cd ..",
-    "deploy-dry": "yarpm run build && npm publish --access-public --dry-run && cd ..",
+    "deploy": "yarpm run build && npm publish --access-public",
+    "deploy-dry": "yarpm run build && npm publish --access-public --dry-run",
     "prettier": "prettier \"**/*.{json,md,scss,yaml,yml,js}\" --write",
     "lint": "eslint ./ --ignore-path .gitignore --ignore-pattern internals/scripts --fix",
     "lint:fix": "npm run lint --fix"
