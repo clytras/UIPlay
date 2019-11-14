@@ -17,6 +17,7 @@ NPM:<br>
 Yarn:<br>
 `yarn add uiplay`<br><br>
 Browser:<br>
+Download latest release from [releases](https://github.com/clytras/UIPlay/releases). CDN soon.
 ```
 <script src='uiplay.js'></script>
 ```
