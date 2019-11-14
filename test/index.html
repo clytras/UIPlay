@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <title>Page Title</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <script src='../dist/uiplay.js'></script>
+</head>
+<body>
+
+<button id="play-audio">Play audio</button>
+
+<script>
+
+  const NofifyAudio = new UIPlay(
+    'orders_notify.mp3',
+    {
+      volume: 1,
+      debounceMillis: 1000
+    }
+  );
+  
+  NofifyAudio.play();
+
+  document.getElementById('play-audio').addEventListener('click', () => {
+    NofifyAudio.play();
+  });
+    
+</script>
+    
+</body>
+</html>

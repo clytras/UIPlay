@@ -1,0 +1,69 @@
+{
+  "name": "uiplay",
+  "displayName": "UIPlay",
+  "version": "1.0.0",
+  "description": "Interface to play audio and other web compatible resources",
+  "jsdelivr": "./dist/uiplay.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "yarpm run build:browser && yarpm run build:module",
+    "build:browser": "npx webpack --config webpack.web.config.js",
+    "build:module": "npx webpack --config webpack.module.config.js --out",
+    "deploy": "yarpm run build && npm publish --access-public && cd ..",
+    "deploy-dry": "yarpm run build && npm publish --access-public --dry-run && cd ..",
+    "prettier": "prettier \"**/*.{json,md,scss,yaml,yml,js}\" --write",
+    "lint": "eslint ./ --ignore-path .gitignore --ignore-pattern internals/scripts --fix",
+    "lint:fix": "npm run lint --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/clytras/UIPlay.git"
+  },
+  "keywords": [
+    "play",
+    "audio",
+    "utility",
+    "html5"
+  ],
+  "author": {
+    "name": "Christos Lytras",
+    "email": "christos.lytras@gmail.com",
+    "url": "https://lytrax.io"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/clytras/UIPlay/issues"
+  },
+  "homepage": "https://github.com/clytras/UIPlay#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.7.0",
+    "@babel/core": "^7.7.2",
+    "@babel/preset-env": "^7.7.1",
+    "babel-loader": "^8.0.6",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10",
+    "yarpm": "^0.2.1",
+    "eslint": "^6.0.1",
+    "eslint-config-airbnb-base": "^13.2.0",
+    "eslint-config-prettier": "^6.0.0",
+    "eslint-plugin-import": "^2.18.0",
+    "eslint-plugin-prettier": "3.1.0",
+    "lint-staged": "^9.2.0",
+    "prettier": "^1.18.2"
+  },
+  "dependencies": {
+    "core-js": "^3.4.1",
+    "debounce": "^1.2.0"
+  },
+  "lint-staged": {
+    "*.{js,jsx}": [
+      "eslint --fix",
+      "git add"
+    ],
+    "*.{json,md,scss,yaml,yml,js}": [
+      "prettier --write",
+      "git add"
+    ]
+  }
+}
