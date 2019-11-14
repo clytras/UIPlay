@@ -1,4 +1,6 @@
-<div style="text-align:center"><img style="height:120px" src="uiplay-logo.png" /></div>
+<p align="center">
+  <img height="120" src="uiplay-logo.png">
+</p>
 
 # UIPlay
 
