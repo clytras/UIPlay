@@ -35,8 +35,6 @@ export default class UIPlay {
   playImmediate(volume = null) {
     const audio = new Audio(this.file);
 
-    audio.load();
-
     audio.addEventListener('loadeddata', () => {
       audio.volume = volume !== null ? volume : this.volume;
       audio.play().catch(error => {
@@ -46,11 +44,13 @@ export default class UIPlay {
       });
     });
 
-    audio.addEventListener('error', error => {
+    audio.addEventListener('error', () => {
       if(!this.ignoreErrors) {
-        throw error;
+        throw new Error(`${libDisplayName}: HTMLMediaElement error`);
       }
     });
+
+    audio.load();
 
     return this;
   }
