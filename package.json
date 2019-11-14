@@ -1,7 +1,7 @@
 {
   "name": "uiplay",
   "displayName": "UIPlay",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Interface to play audio and other web compatible resources",
   "jsdelivr": "./browser/uiplay.js",
   "main": "index.js",

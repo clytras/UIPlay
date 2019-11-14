@@ -45,10 +45,10 @@ document.getElementById('play-audio').addEventListener('click', () => {
 The initialization of a new HTMLMediaElement object.
 
 `play(volume: number)`<br>
-Plays the audio using a debouncing timer. The `volume` parameter can be ommited to use `options` volume.
+Plays the audio using a debouncing timer. The `volume` parameter can be omitted to use `options` volume.
 
 `playImmediate(volume: number)`<br>
-Plays the audio immediately without debouncing. The `volume` parameter can be ommited to use `options` volume.
+Plays the audio immediately without debouncing. The `volume` parameter can be omitted to use `options` volume.
 
 `setVolume(volume: number)`<br>
 Sets the volume level using decimal fraction (0-1).
