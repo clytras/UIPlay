@@ -28,7 +28,7 @@ module.exports = {
     extensions: ['*', '.js']
   },
   output: {
-    path: __dirname + '/',
+    path: `${__dirname}/`,
     publicPath: '/',
     filename: 'index.js',
     library: "uiplay",
@@ -37,4 +37,4 @@ module.exports = {
   devServer: {
     contentBase: './dist'
   }
-}
+};

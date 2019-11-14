@@ -1,15 +1,18 @@
 {
   "name": "uiplay",
   "displayName": "UIPlay",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Interface to play audio and other web compatible resources",
-  "jsdelivr": "./browser/uiplay.js",
-  "main": "index.js",
+  "jsdelivr": "dist/uiplay.js",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.esm.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "npm run lint",
     "build": "yarpm run build:browser && yarpm run build:module",
-    "build:browser": "npx webpack --config webpack.web.config.js",
-    "build:module": "npx webpack --config webpack.module.config.js --out",
+    "build:browser": "rollup --config rollup.config.iife.js",
+    "build:module": "rollup --config rollup.config.js",
+    "build:webpack:browser": "npx webpack --config webpack.web.config.js",
+    "build:webpack:module": "npx webpack --config webpack.module.config.js --out",
     "deploy": "yarpm run build && npm publish --access-public",
     "deploy-dry": "yarpm run build && npm publish --access-public --dry-run",
     "prettier": "prettier \"**/*.{json,md,scss,yaml,yml,js}\" --write",
@@ -32,6 +35,17 @@
     "url": "https://lytrax.io"
   },
   "license": "MIT",
+  "files": [
+    "dist/index.cjs.js",
+    "dist/index.esm.js",
+    "dist/uiplay.js",
+    "dist/uiplay.js.map",
+    "dist/",
+    "uiplay-logo.png",
+    "LICENSE",
+    "README.md"
+  ],
+  "sideEffects": false,
   "bugs": {
     "url": "https://github.com/clytras/UIPlay/issues"
   },
@@ -42,19 +56,24 @@
     "@babel/preset-env": "^7.7.1",
     "babel-loader": "^8.0.6",
     "core-js": "^3.4.1",
-    "webpack": "^4.41.2",
-    "webpack-cli": "^3.3.10",
-    "yarpm": "^0.2.1",
     "eslint": "^6.0.1",
     "eslint-config-airbnb-base": "^13.2.0",
     "eslint-config-prettier": "^6.0.0",
     "eslint-plugin-import": "^2.18.0",
     "eslint-plugin-prettier": "3.1.0",
     "lint-staged": "^9.2.0",
-    "prettier": "^1.18.2"
+    "prettier": "^1.18.2",
+    "rollup": "^1.27.0",
+    "rollup-plugin-babel": "^4.3.3",
+    "rollup-plugin-babel-minify": "^9.1.1",
+    "rollup-plugin-json": "^4.0.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10",
+    "yarpm": "^0.2.1"
   },
   "dependencies": {
-    "debounce": "^1.2.0"
+    "throttle-debounce": "^2.1.0"
   },
   "lint-staged": {
     "*.{js,jsx}": [
