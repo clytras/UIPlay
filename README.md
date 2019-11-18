@@ -6,7 +6,7 @@
 
 # UIPlay
 
-This is a small utility that preloads audio files and lets developers to play them at any point they need to. This utility properly cacthes all corecponding errors that may occur during loading and playback. It forces browser to preload files by appending HTML elements for each object that is initialized.
+This is a small utility that preloads audio files and lets developers to play them at any point they need to. This utility properly cacthes all corresponding errors that may occur during loading and playback. It forces browser to preload files by appending HTML elements for each object that is initialized.
 
 ## Demo
 
