@@ -15,7 +15,7 @@ You can find an online demo here: https://lytrax.io/pub/dev/uiplay
 ## Installation
 
 NPM:<br>
-`npm install uiplay --save`<br><br>
+`npm install uiplay`<br><br>
 Yarn:<br>
 `yarn add uiplay`<br><br>
 Browser:<br>
